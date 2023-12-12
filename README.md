@@ -1,4 +1,5 @@
 # Home-M8
+## Home-M8 (=Home-Mate) soll helfen deinen Haushalt besser zu organisieren.
 
 > Coming Soon
 
