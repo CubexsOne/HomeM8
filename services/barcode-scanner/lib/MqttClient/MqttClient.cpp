@@ -8,7 +8,7 @@ PubSubClient pubSubClient(wifiClient);
 
 // Variables
 const char* mqtt_server = MQTT_HOST;
-const int mqtt_port = 23218;
+const int mqtt_port = 1884;
 const char* mqtt_user = MQTT_USER;
 const char* mqtt_password = MQTT_PASSWORD;
 const char* mqtt_read_topic = MQTT_READ_TOPIC;
