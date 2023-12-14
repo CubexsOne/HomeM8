@@ -19,8 +19,9 @@ WifiManager wifiManager;
 void setup() {
   Serial.begin(9600);
   displayManager.begin();
+  wifiManager.begin(displayManager);
   mqttClient.begin(displayManager);
-  scanner.begin(mqttClient);
+  scanner.begin(displayManager, mqttClient);
 }
 
 void loop() {

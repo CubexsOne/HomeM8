@@ -7,12 +7,14 @@
 // Variables
 String barcode = "";
 SoftwareSerial barcodeScanner(16, 17);
-MqttClient sMqtt;
+MqttClient scannerMqtt;
+DisplayManager scannerDM;
 
 Scanner::Scanner() {}
 
-void Scanner::begin(MqttClient mqttClient) {
-  sMqtt = mqttClient;
+void Scanner::begin(DisplayManager displayManager, MqttClient mqttClient) {
+  scannerDM = displayManager;
+  scannerMqtt = mqttClient;
   barcodeScanner.begin(9600);
 }
 
@@ -21,7 +23,7 @@ void Scanner::loop() {
     while (barcodeScanner.available()) {
       char input = barcodeScanner.read();
       if (input == '\n') {
-        sMqtt.sendMQTTMessage(barcode);
+        scannerMqtt.sendMQTTMessage(barcode);
         barcode = "";
         return;
       }

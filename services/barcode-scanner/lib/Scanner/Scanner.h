@@ -7,7 +7,7 @@
 class Scanner {
 public:
   Scanner();
-  void begin(MqttClient);
+  void begin(DisplayManager, MqttClient);
   void loop();
 };
 

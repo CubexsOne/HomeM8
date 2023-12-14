@@ -12,6 +12,9 @@ public:
   void sendMQTTMessage(String);
 private:
   void reconnect();
+  void printConnecting();
+  void printConnected();
+  void printScannedBarcode(String);
 };
 
 #endif

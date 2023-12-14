@@ -8,8 +8,7 @@ public:
   DisplayManager();
   void begin();
   void loop();
-  void printBarcode(String);
-  void printItem(String);
+  void printText(int16_t, int16_t, uint8_t, String, boolean = false);
 };
 
 #endif
