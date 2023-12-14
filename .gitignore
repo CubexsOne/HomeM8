@@ -160,3 +160,6 @@ secrets.h
 
 # OS
 .DS_Store
+
+# Git
+services/**/.gitignore
